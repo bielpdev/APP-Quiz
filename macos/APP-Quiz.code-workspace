@@ -1,0 +1,41 @@
+{
+	"folders": [
+		{
+			"path": "../../../app_quiz2024/APP-Quiz"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../test"
+		},
+		{
+			"path": "../web"
+		},
+		{
+			"path": "../windows"
+		},
+		{
+			"path": "../.dart_tool"
+		},
+		{
+			"path": "../.idea"
+		},
+		{
+			"path": "../android"
+		},
+		{
+			"path": "../build"
+		},
+		{
+			"path": "../ios"
+		},
+		{
+			"path": "../lib"
+		},
+		{
+			"path": "../linux"
+		}
+	],
+	"settings": {}
+}
