@@ -4,40 +4,40 @@ import 'package:app_quiz2024/resultado.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({required this.nota});
-  int nota;
+  const HomePage({super.key});
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   var perguntaSelecionada = 0;
+  int notatotal = 0;
   final List<Map<String, Object>> perguntas = [
     {
       'texto': 'Qual é a sua cor favorita ?',
       'respostas': [
-        {'texto': 'Preto', 'nota': 5},
-        {'texto': 'Vermelho', 'nota': 6},
+        {'texto': 'Preto', 'nota': 1},
+        {'texto': 'Vermelho', 'nota': 2},
         {'texto': 'Verde', 'nota': 3},
-        {'texto': 'Branco', 'nota': 7},
+        {'texto': 'Branco', 'nota': 2},
       ],
     },
     {
       'texto': 'Qual é o seu animal favorito ?',
       'respostas': [
-        {'texto': 'Coelho', 'nota': 7},
-        {'texto': 'Cobra', 'nota': 9},
-        {'texto': 'Elefante', 'nota': 5},
-        {'texto': 'Leao', 'nota': 12},
+        {'texto': 'Coelho', 'nota': 2},
+        {'texto': 'Cobra', 'nota': 7},
+        {'texto': 'Elefante', 'nota': 2},
+        {'texto': 'Leao', 'nota': 1},
       ],
     },
     {
       'texto': 'Qual seu instrutor favorito?',
       'respostas': [
-        {'texto': 'Joao', 'nota': 12},
-        {'texto': 'Maria', 'nota': 11},
-        {'texto': 'Leo', 'nota': 8},
-        {'texto': 'Pedro', 'nota': 17},
+        {'texto': 'Joao', 'nota': 3},
+        {'texto': 'Maria', 'nota': 4},
+        {'texto': 'Leo', 'nota': 2},
+        {'texto': 'Pedro', 'nota': 5},
       ],
     },
   ];
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
     if (temPerguntaSelecionada) {
       setState(() {
         perguntaSelecionada++;
-        nota += nota;
+        notatotal += nota;
       });
     }
     print(nota);
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Center(
+          title: const Center(
             child: Text(style: TextStyle(color: Colors.white), 'Perguntas'),
           ),
         ),
@@ -77,6 +77,6 @@ class _HomePageState extends State<HomePage> {
                 perguntaSeleciona: perguntaSelecionada,
                 responder: responder,
                 perguntas: perguntas)
-            : Result(nota, reiniciarForm));
+            : Result(notatotal, reiniciarForm));
   }
 }

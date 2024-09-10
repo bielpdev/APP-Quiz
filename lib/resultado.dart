@@ -1,23 +1,18 @@
-import 'package:app_quiz2024/main.dart';
 import 'package:flutter/material.dart';
 
-class Result extends StatefulWidget {
-  int nota;
+class Result extends StatelessWidget {
+  int notatotal;
+
   final void Function() reiniciarForm;
-  Result(this.nota, this.reiniciarForm);
+  Result(this.notatotal, this.reiniciarForm, {super.key});
 
-  @override
-  State<Result> createState() => _ResultState();
-}
-
-class _ResultState extends State<Result> {
   String get fraseResult {
-    if (nota < 8) {
+    if (notatotal < 8) {
       return 'Você é bom!!';
-    } else if (nota < 27) {
+    } else if (notatotal < 15) {
       return 'Jedai Mode';
-    } else if (nota < 22) {
-      return 'Quase lá!';
+    } else if (notatotal < 20) {
+      return 'VC é o melhor!';
     } else {
       return 'MAGNIFICOO';
     }
@@ -31,14 +26,14 @@ class _ResultState extends State<Result> {
         Center(
           child: Text(
             fraseResult,
-            style: TextStyle(fontSize: 25),
+            style: const TextStyle(fontSize: 25),
           ),
         ),
         Padding(
           padding: const EdgeInsets.all(17.0),
           child: ElevatedButton(
-              onPressed: widget.reiniciarForm,
-              child: Text('Reiniciar Formulario')),
+              onPressed: reiniciarForm,
+              child: const Text('Reiniciar Formulario')),
         )
       ],
     );

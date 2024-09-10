@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class Questionario extends StatelessWidget {
   const Questionario(
-      {required this.perguntaSeleciona,
+      {super.key,
+      required this.perguntaSeleciona,
       required this.responder,
       required this.perguntas});
 
@@ -13,7 +14,7 @@ class Questionario extends StatelessWidget {
   final void Function(int) responder;
 
   bool get temPerguntaSeleciona {
-    Text('data');
+    const Text('data');
     return perguntaSeleciona < perguntas.length;
   }
 
@@ -26,11 +27,11 @@ class Questionario extends StatelessWidget {
 
     return Column(
       children: [
-        Questao(perguntas[perguntaSeleciona]['texto'] as String),
+        Questao(perguntas[perguntaSeleciona]['texto'].toString()),
         ...respostas.map((resp) {
           return Resposta(
-            resp['texto'] as String,
-            () => responder(resp['nota'] as int),
+            resp['texto'].toString(),
+            () => responder(int.parse(resp['nota'].toString())),
           );
         }),
       ],

@@ -5,7 +5,7 @@ int nota = 0;
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: StartPage(),
     ),
@@ -17,8 +17,6 @@ class StartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePage(
-      nota: nota,
-    );
+    return const HomePage();
   }
 }
