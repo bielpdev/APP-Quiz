@@ -1,0 +1,41 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/test"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/web"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/windows"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/.dart_tool"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/.idea"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/android"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/build"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/ios"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/lib"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/linux"
+		},
+		{
+			"path": "../../../api_aplication/app_quiz2024/macos"
+		}
+	],
+	"settings": {}
+}
